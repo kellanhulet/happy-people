@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { Router, Switch, Route } from 'react-router-dom';
+import { ChakraProvider, Button, Image } from "@chakra-ui/react";
 import './App.css';
+import logo from './images/ty.png';
+import NavFrame from "./components/NavFrame/NavFrame";
+
 
 function App() {
+  const[text, setText] = useState("Click if hot");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <NavFrame/> 
+      <Button onClick={(e) => {
+        setText("Hey Ty")
+      }}>
+        {text}
+      </Button>
+      <Image src={logo}/>
+    </ChakraProvider>
   );
 }
 
