@@ -13,7 +13,7 @@ function Header() {
         <Flex justifyContent="space-between" width="100%" alignItems="center" paddingLeft={3}>
             <Sidebar/>
             <Text fontSize="5xl" color="white">
-                Dibs on being the power stone :)
+                Happy People :)
             </Text>
             <Image boxSize="80px" src={logo}/>
         </Flex>

@@ -7,15 +7,9 @@ import NavFrame from "./components/NavFrame/NavFrame";
 
 
 function App() {
-  const[text, setText] = useState("Click if hot");
   return (
     <ChakraProvider>
       <NavFrame/> 
-      <Button onClick={(e) => {
-        setText("Hey Ty")
-      }}>
-        {text}
-      </Button>
       <Image src={logo}/>
     </ChakraProvider>
   );
